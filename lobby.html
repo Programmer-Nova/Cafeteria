@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lobby - Cafetería Escolar</title>
+    <link rel="stylesheet" href="estilos/lobby.css">
+</head>
+<body>
+    <header class="navbar">
+        <div class="navbar-inner">
+            <a href="#novedades" class="marca">
+                <span class="marca-logo-wrap">
+                    <img src="img/cafe.png" alt="Logo Cafetería Escolar" class="marca-logo">
+                </span>
+                <span class="marca-texto">
+                    <strong>Cafetería Escolar</strong>
+                    <small>Menú estudiantil</small>
+                </span>
+            </a>
+
+            <nav class="nav-enlaces" aria-label="Navegación principal">
+                <a href="#novedades">Novedades</a>
+                <a href="#descuentos">Descuentos</a>
+                <a href="#catalogo">Catálogo</a>
+                <a href="logout.php" class="btn-cerrar-sesion">Cerrar sesión</a>
+            </nav>
+        </div>
+    </header>
+
+    <main class="lobby-main">
+        <!-- CARRUSEL DE NOVEDADES -->
+        <section id="novedades" class="seccion-carrusel" aria-label="Novedades y promociones">
+            <div class="carrusel" id="carrusel">
+                <div class="carrusel-pista" id="carrusel-pista">
+                    <article class="slide">
+                        <img src="img/img1.jpg" alt="Café caliente y café frío recién preparados">
+                        <div class="slide-overlay">
+                            <span class="slide-badge">Novedad</span>
+                            <h1>Bebidas Frías y Calientes</h1>
+                            <p>Disfruta nuestros lattes artesanales y café helado preparados al momento.</p>
+                        </div>
+                    </article>
+
+                    <article class="slide">
+                        <img src="img/img2.jpg" alt="Desayunos, bagels, pasta y hotcakes con fruta">
+                        <div class="slide-overlay">
+                            <span class="slide-badge">Menú especial</span>
+                            <h2>Combos de Desayuno</h2>
+                            <p>Bagels recién horneados, platillos calientes y postres ideales para tu receso.</p>
+                        </div>
+                    </article>
+
+                    <article class="slide">
+                        <img src="img/img3.jpg" alt="Ilustración Coffee Time con espresso y granos frescos">
+                        <div class="slide-overlay">
+                            <span class="slide-badge">Hora del café</span>
+                            <h2>100% Grano Fresco</h2>
+                            <p>Aroma intenso cada mañana para recargar energía antes de tus clases.</p>
+                        </div>
+                    </article>
+
+                    <article class="slide">
+                        <img src="img/img4.jpg" alt="Variedad de sándwiches, wraps, ensaladas y smoothies">
+                        <div class="slide-overlay">
+                            <span class="slide-badge">Para compartir</span>
+                            <h2>Snacks, Wraps y Smoothies</h2>
+                            <p>Opciones frescas y deliciosas para todos los gustos durante todo el día.</p>
+                        </div>
+                    </article>
+                </div>
+
+                <button type="button" class="carrusel-btn prev" id="btn-prev" aria-label="Imagen anterior">
+                    &#10094;
+                </button>
+                <button type="button" class="carrusel-btn next" id="btn-next" aria-label="Imagen siguiente">
+                    &#10095;
+                </button>
+
+                <div class="carrusel-puntos" id="carrusel-puntos" role="tablist" aria-label="Seleccionar diapositiva">
+                    <button type="button" class="punto activo" data-index="0" aria-label="Ir a diapositiva 1"></button>
+                    <button type="button" class="punto" data-index="1" aria-label="Ir a diapositiva 2"></button>
+                    <button type="button" class="punto" data-index="2" aria-label="Ir a diapositiva 3"></button>
+                    <button type="button" class="punto" data-index="3" aria-label="Ir a diapositiva 4"></button>
+                </div>
+            </div>
+        </section>
+
+        <!-- DESCUENTOS -->
+        <section id="descuentos" class="seccion">
+            <div class="seccion-cabecera">
+                <h2>Descuentos del día</h2>
+                <p>Promociones exclusivas mostrando tu credencial escolar</p>
+            </div>
+
+            <div class="grid-descuentos">
+                <article class="tarjeta-promo">
+                    <span class="promo-tag">15% OFF</span>
+                    <h3>Combo Mañanero</h3>
+                    <p>Café caliente o Chocomilk acompañado de una torta recién preparada.</p>
+                </article>
+
+                <article class="tarjeta-promo">
+                    <span class="promo-tag">2x1</span>
+                    <h3>Tardes de Café</h3>
+                    <p>Aplica en bebidas participantes de lunes a jueves después de las 2:00 PM.</p>
+                </article>
+
+                <article class="tarjeta-promo">
+                    <span class="promo-tag">-$5 MXN</span>
+                    <h3>Trae tu termo</h3>
+                    <p>Obtén descuento inmediato en cualquier bebida al usar tu vaso reutilizable.</p>
+                </article>
+            </div>
+        </section>
+
+        <!-- CATÁLOGO EN VIVO DESDE LA BD -->
+        <section id="catalogo" class="seccion">
+            <div class="seccion-cabecera">
+                <h2>Catálogo de la cafetería</h2>
+                <p>Precios y disponibilidad actualizados en tiempo real</p>
+            </div>
+
+            <div id="grid-productos" class="grid-productos">
+                <p class="estado-carga">Cargando productos...</p>
+            </div>
+        </section>
+    </main>
+
+    <footer class="lobby-footer">
+        <p>Cafetería Escolar &middot; www.cafeteriaescolar.com</p>
+    </footer>
+
+    <script src="js/lobby.js"></script>
+</body>
+</html>

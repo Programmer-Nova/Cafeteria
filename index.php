@@ -1,14 +1,21 @@
-<?php require_once __DIR__ . '/conexion.php'; ?>
+<?php
+require_once __DIR__ . '/verificar_admin.php';
+require_once __DIR__ . '/conexion.php';
+?>
 <!DOCTYPE html>
 <html lang="es">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Cafetería Escolar</title>
-    <link rel="stylesheet" href="estilos/estilos.css?v=2">
+    <link rel="stylesheet" href="estilos/estilos.css?v=3">
 </head>
 <body>
     <div class="contenedor">
+        <div class="barra-sesion">
+            <span>Sesión: <strong><?= htmlspecialchars($_SESSION['nombre'] ?? $_SESSION['usuario'], ENT_QUOTES, 'UTF-8') ?></strong> (Admin)</span>
+            <a href="logout.php" class="btn-salir">Cerrar sesión</a>
+        </div>
         <div class="encabezado">
             <img src="img/cafe.png" alt="Logo Cafetería Escolar" class="logo">
             <div class="textos">

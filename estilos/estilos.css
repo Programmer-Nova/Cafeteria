@@ -277,3 +277,28 @@ button:hover {
 .btn-confirmar:hover {
     background-color: #b91c1c;
 }
+
+/* ---------- BARRA DE SESIÓN ADMIN ---------- */
+.barra-sesion {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    gap: 14px;
+    margin-bottom: 16px;
+    font-size: 14px;
+    color: #334155;
+}
+
+.btn-salir {
+    background-color: #dc2626;
+    color: #ffffff;
+    text-decoration: none;
+    padding: 7px 14px;
+    border-radius: 7px;
+    font-size: 13px;
+    font-weight: bold;
+}
+
+.btn-salir:hover {
+    background-color: #b91c1c;
+}
